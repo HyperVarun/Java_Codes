@@ -4,15 +4,23 @@ number of negative number
 number of odd number
 numver of even number
 number of zero's number*/
-
+import java.util.*;
 class CountArray
 {
     public static void main(String args[])
     {
-        int [][] arr={{1,2,-3,4},
-                        {0,0,-4,2},
-                        {1,-1,2,3},
-                        {-4,-5,-7,0}};
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the row of the array:");
+        int row = sc.nextInt();
+        System.out.println("Enter the column of the array:");
+        int column = sc.nextInt();
+        int[][] array = new int[row][column];
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < column; j++) {
+                System.out.print("Enter the element at row " + i + " and column " + j + ": ");
+                array[i][j] = sc.nextInt();
+            }
+        }
         int npn=0;
         int nnn=0;
         int non=0;
